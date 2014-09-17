@@ -5,7 +5,7 @@
   "license": "MIT",
   "homepage": "http://wagerfield.github.io/parallax/",
   "author": "Matthew Wagerfield <matthew@wagerfield.com>",
-  "main": "deploy/parallax.js",
+  "main": "build/parallax.js",
   "directories": {
     "example": "examples"
   },

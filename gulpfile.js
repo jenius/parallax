@@ -17,7 +17,7 @@ gulp.task('build.jquery.parallax', function() {
 });
 
 gulp.task('clean', function() {
-  return gulp.src(['deploy'], {read: false}).pipe(plugins.clean());
+  return gulp.src(['build'], {read: false}).pipe(plugins.clean());
 });
 
 gulp.task('build', ['clean'], function() {
@@ -37,10 +37,10 @@ function build(stream, file) {
     .pipe(plugins.header(fs.readFileSync('./LICENSE', 'utf8')))
     .pipe(plugins.jshint())
     .pipe(plugins.jshint.reporter('jshint-stylish'))
-    .pipe(gulp.dest('deploy'))
+    .pipe(gulp.dest('build'))
     .pipe(plugins.rename({suffix: '.min'}))
     .pipe(plugins.uglify())
-    .pipe(gulp.dest('deploy'));
+    .pipe(gulp.dest('build'));
 }
 
 function buildJquery(stream, file) {
@@ -54,8 +54,8 @@ function buildJquery(stream, file) {
     .pipe(plugins.header(fs.readFileSync('./LICENSE', 'utf8')))
     .pipe(plugins.jshint())
     .pipe(plugins.jshint.reporter('jshint-stylish'))
-    .pipe(gulp.dest('deploy'))
+    .pipe(gulp.dest('build'))
     .pipe(plugins.rename({suffix: '.min'}))
     .pipe(plugins.uglify())
-    .pipe(gulp.dest('deploy'));
+    .pipe(gulp.dest('build'));
 }

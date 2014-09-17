@@ -8,10 +8,10 @@
     "Matthew Wagerfield <matthew@wagerfield.com>"
   ],
   "main": [
-    "deploy/parallax.js",
-    "deploy/parallax.min.js",
-    "deploy/jquery.parallax.js",
-    "deploy/jquery.parallax.min.js"
+    "build/parallax.js",
+    "build/parallax.min.js",
+    "build/jquery.parallax.js",
+    "build/jquery.parallax.min.js"
   ],
   "ignore": [
     "**/.*",
